@@ -20,7 +20,7 @@
   --cultured: hsla(0, 0%, 97%, 1);
   --french-bistre: rgb(20, 105, 45);
   --jet: hsla(0, 0%, 20%, 1);
-  --bistre: hsla(35, 100%, 9%, 1);
+  --bistre: rgb(20, 105, 45);
   --bistre_a75: hsla(35, 100%, 9%, 0.75);
   --camel: hsla(30, 30%, 58%, 1);
   --umber: rgb(2, 153, 10);
@@ -390,6 +390,53 @@ body {
   #ABOUT
 \*-----------------------------------*/
 
+.about {
+  background: var(--bistre);
+  color: var(--white);
+}
+
+.about .container {
+  display: grid;
+  gap: 30px;
+}
+
+.about-banner {
+  border-radius: var(--radius-20);
+  max-width: max-content;
+}
+
+.about-banner-1 {
+  border-bottom-right-radius: 120px;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 45px;
+  border-top-right-radius: 60px;
+}
+
+.about .section-title {
+  color: var(--white);
+}
+
+.about .wrapper .section-title {
+  margin-block-start: 20px;
+}
+
+.about-banner-2 {
+  border-top-right-radius: 140px;
+  border-top-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  border-bottom-left-radius: 140px;
+}
+
+.about-content .section-title {
+  margin-block-end: 20px;
+}
+
+.about-banner-3 {
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 190px;
+  border-bottom-right-radius: 90px;
+  border-top-right-radius: 130px;
+}
 
 
 
