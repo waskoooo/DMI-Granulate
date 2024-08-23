@@ -17,12 +17,12 @@
 :root {
   /**colors*/
 
-  --cultured: hsla(0, 0%, 97%, 1);
-  --french-bistre: rgb(20, 105, 45);
+  --cultured: hsl(0, 0%, 97%);
+  --french-bistre:rgb(20, 105, 45);  
   --jet: hsla(0, 0%, 20%, 1);
   --bistre: rgb(20, 105, 45);
   --bistre_a75: hsla(35, 100%, 9%, 0.75);
-  --camel: hsla(30, 30%, 58%, 1);
+  --low-white: rgb(209, 209, 209);
   --umber: rgb(2, 153, 10);
   --golden-brown_a60: hsla(35, 70%, 38%, 0.6);
   --granite-gray: hsla(0, 0%, 38%, 1);   
@@ -149,7 +149,7 @@ body {
 }
 
 .logo {
-  color: var(--bistre);
+  color: var(--black);
   font-size: var(--fs-3);
   font-family: var(--ff-rosario);
 }
@@ -192,8 +192,11 @@ body {
   gap: 12px;
   min-height: 58px;
   padding-inline: 36px;
-  border-radius: var(--btn-radius);
-  transition: var(--transition-1);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  transition: var(--transition-2);
 }
 
 .btn:is(:hover, :focus-visible) {
@@ -213,7 +216,14 @@ body {
   transition: var(--transition-2);
 }
 
+.text-center {
+  text-align: center;
+}
 
+.grid-list {
+  display: grid;
+  gap: 60px;
+}
 
 
 /*-----------------------------------*\
@@ -445,50 +455,150 @@ body {
   #COLLECTION
 \*-----------------------------------*/
 
+.collection .section-text {
+  margin-block: 20px 60px;
+}
 
+.collection-card .card-banner {
+  border-radius: 250px 250px 20px 20px;
+  max-width: max-content;
+  margin-inline: auto;
+}
 
+.collection-card .card-title {
+  margin-block: 20px;
+}
 
-
-/*-----------------------------------*\
-  #FEATURES
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #TESTIMONIALS
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #GALLERY
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
-
-
-
-
+.collection-card .btn {
+  margin-inline: auto;
+  margin-block-start: 24px;
+}
 
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
+.footer {
+  background-color: var(--bistre);
+  color: var(--white);
+}
 
+.footer-top {
+  display: grid;
+  gap: 30px;
+  padding-block-end: 50px;
+  border-block-end: 1px solid var(--white);
+}
 
+.footer .logo {
+  color: var(--white);
+  font-size: 3.2rem;
+}
 
+.footer-brand .footer-text {
+  margin-block: 20px;
+}
+
+.social-list {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  color: var(--french-bistre);
+  font-size: 1.8rem;
+}
+
+.footer-list-title {
+  color: var(--low-white);
+  font-family: var(--ff-rosario);
+  font-size: 1.8rem;
+  font-weight: var(--fw-700);
+  margin-block-end: 20px;
+}
+
+.footer-bottom {
+  padding-block: 50px;
+  text-align: center;
+}
+
+.copyright {
+  color: var(--low-white);
+  font-family: var(--ff-rosario) ;
+  font-size: var(--fs-5);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+
+  :root {
+    --fs-1: 6.5rem;
+  }
+
+  .container { max-width: 720px; }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+
+  .hero .wrapper {
+    grid-template-columns: 0.8fr 1fr;
+    align-items: flex-end;
+    column-gap: 20px;
+  }
+
+
+}
+
+@media (min-width: 992px) {
+  :root {
+
+    --fs-2: 4.8rem;
+    --fs-3: 3.5rem;
+
+  }
+
+  .container { max-width: 950px;}
+
+  .nav-open-btn,
+  .nav-close-btn,
+  .overlay { display: none; }
+
+  .header { padding-block: 20px; }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    display: block;
+  }
+
+  .navbar-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .navbar-link {
+    color: var(--bistre);
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+}
+
