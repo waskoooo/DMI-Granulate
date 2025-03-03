@@ -66,3 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const footerForm = document.getElementById("footerContactForm");
+
+    footerForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Спира презареждането на страницата
+
+        let formData = new FormData(footerForm);
+
+        fetch("send-email.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("Съобщението е изпратено успешно!");
+            footerForm.reset();
+        })
+        .catch(error => {
+            alert("Грешка при изпращане на съобщението.");
+        });
+    });
+});

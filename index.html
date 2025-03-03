@@ -257,10 +257,10 @@
         
                         <div class="card-content">
         
-                          <h3 class="h3 card-title">Мелене На Детайли</h3>
+                          <h3 class="h3 card-title">Смилане На Детайли</h3>
         
                           <p class="card-text">
-                            Също така предлагаме и услуга - мелене на детайли / леяци.
+                            Също така предлагаме и услуга - смилане  на детайли / леяци.
                           </p>
         
                           <a href="#footer" class="btn">
@@ -316,14 +316,22 @@
 
     <footer id="footer" class="footer">
       <div class="footer-container">
-        <!-- Лявата част: Лого и текст -->
-        <div class="footer-brand">
-          <a href="#" class="logo">DMI GRANULATE</a>
-          <p class="footer-text">
-            За допълнителна информация или за консултация относно вашите специфични изисквания, 
-            моля, не се колебайте да се свържете с нас.
-          </p>
-        </div>
+          <!-- Лявата част: Контактна форма -->
+          <div class="footer-brand">
+              <h2 class="footer-title">Свържете се с нас</h2>
+              <form id="footerContactForm">
+                  <label for="footer-name">Име:</label>
+                  <input type="text" id="footer-name" name="name" required>
+  
+                  <label for="footer-email">Имейл:</label>
+                  <input type="email" id="footer-email" name="email" required>
+  
+                  <label for="footer-message">Съобщение:</label>
+                  <textarea id="footer-message" name="message" required></textarea>
+  
+                  <button type="submit" class="btn">Изпрати</button>
+              </form>
+          </div>
     
         <!-- Средна част: Контакти -->
         <ul class="footer-list">
