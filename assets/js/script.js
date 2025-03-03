@@ -37,3 +37,32 @@ const headerActive = function () {
 }
 
 window.addEventListener("scroll", headerActive);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("documentModal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.querySelector(".close");
+
+    if (openModal && modal && closeModal) {
+        // Дефинираме първоначално модала като скрит
+        modal.style.display = "none";
+
+        // При клик върху "документи" – отваря модала
+        openModal.addEventListener("click", function (event) {
+            event.preventDefault();
+            modal.style.display = "flex";
+        });
+
+        // При клик върху "X" – затваря модала
+        closeModal.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        // При клик извън модала – също го затваря
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+});
