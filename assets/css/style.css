@@ -145,7 +145,10 @@ body {
 \*-----------------------------------*/
 
 .container {
-  padding-inline: 20px;
+  padding-inline: 16px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {
@@ -262,25 +265,38 @@ body {
   color: var(--bistre);
 }
 
-.nav-open-btn ion-icon { --ionicon-stroke-width: 26px; }
+.nav-open-btn ion-icon { --ionicon-stroke-width: 26px;}
 
 .navbar {
   position: absolute;
   top: 0;
-  left: -350px;
+  left: -300px;
   max-width: 350px;
-  width: 100%;
-  background-color: var(--cultured);
+  background-color: var(--white);
+  color: var(--bistre);
   height: 100vh;
   padding: 16px;
   z-index: 2;
   visibility: hidden;
   transition: 0.25s var(--cubic-in);
+  border: none;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+  pointer-events: none;
+  background-color: none;
 }
 
 .navbar.active {
   visibility: visible;
-  transform: translateX(350px);
+  transform: translateX(300px);
   transition: 0.5s var(--cubic-out);
 }
 
@@ -300,7 +316,7 @@ body {
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus-visible) { color: var(--french-bistre); }
+.navbar-link:is(:hover, :focus-visible) { color: var(--french-bistre);}
 
 .overlay {
   position: fixed;
@@ -319,22 +335,6 @@ body {
   visibility: visible;
   opacity: 0.4;
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 2.4rem;
-}
-
-.logo img.client-logo {
-  margin-left: 15px;
-  height: auto;
-  max-height: 60px;
-  width: auto;
-  object-fit: contain;
-}
-
-
 
 /*-----------------------------------*\
   #HERO
@@ -567,10 +567,13 @@ body {
 /* Централен контейнер, който започва от средата на страницата */
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   max-width: 900px; /* Определя ширината на футъра */
   width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Логото и текстът вляво */
@@ -696,26 +699,44 @@ body {
   transform: scale(1.05);
 }
 
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+}
+
+
+
+
+
 /**
  * responsive for large than 768px screen
  */
-
- @media (max-width: 768px) {
-  .footer-brand {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  #footerContactForm {
-    align-items: center;
-  }
-
-  #footerContactForm input,
-  #footerContactForm textarea {
-    font-size: 1.6rem;
-    width: 90%;
-  }
-}
 
 @media (min-width: 768px) {
 
@@ -731,8 +752,13 @@ body {
 
     --fs-1: 6.5rem;
 
-    
-  }
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+}
 
 
 
@@ -895,11 +921,34 @@ body {
 
 
 
-  
+  /**
+   * FEATURES
+   */
+
+  .feature {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .feature-banner,
+  .feature-content { width: 50%; }
+
+  .feature-banner { min-height: 100%; }
+
+  .feature-content { padding-inline: 80px; }
 
 
 
-  
+  /**
+   * GALLERY
+   */
+
+  .gallery-list { grid-template-columns: repeat(4, 1fr); }
+
+  .gallery-card {
+    height: 560px;
+    padding: 60px 40px;
+  }
 
 }
 
@@ -946,9 +995,19 @@ body {
 
 
 
+  /**
+   * TESTIMONIALS
+   */
+
+  .testi .container { max-width: 680px; }
 
 
 
+  /**
+   * BLOG
+   */
+
+  .blog .grid-list { gap: 60px; }
 
   /**
    * FOOTER
@@ -957,68 +1016,4 @@ body {
   .footer-top { grid-template-columns: 1fr 0.5fr 0.5fr 0.6fr; }
 
   .footer-brand { padding-inline-end: 60px; }
-
-}
-
-/* ✅ Подредба за мобилни устройства (<768px) */
-@media (max-width: 768px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
   }
-
-  .footer-brand,
-  .footer-list,
-  .footer-map {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-map iframe {
-    width: 100%;
-    height: 200px; /* По-малка карта за мобилни */
-  }
-}
-
-/* ✅ Подредба за таблети (768px - 992px) */
-@media (min-width: 768px) and (max-width: 992px) {
-  .footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .footer-brand {
-    grid-column: span 2; /* Логото да е на цял ред */
-    text-align: center;
-  }
-
-  .footer-map {
-    grid-column: span 2; /* Картата да е на отделен ред */
-    text-align: center;
-  }
-}
-
-/* ✅ Подредба за големи екрани (>1200px) */
-@media (min-width: 1200px) {
-  .footer-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-
-  .footer-brand {
-    text-align: left;
-  }
-
-  .footer-list {
-    text-align: center;
-  }
-
-  .footer-map {
-    text-align: right;
-  }
-}
