@@ -336,6 +336,18 @@ body {
   opacity: 0.4;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img.client-logo {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
