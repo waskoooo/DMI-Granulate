@@ -711,6 +711,17 @@ body {
   transform: scale(1.05);
 }
 
+.footer-list-title a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.footer-list-title i {
+  font-size: 18px;
+}
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
