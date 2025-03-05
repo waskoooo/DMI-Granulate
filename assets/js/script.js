@@ -67,6 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Затваряне на навбара при избор на някой от бутоните
+const navLinks = document.querySelectorAll(".navbar-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        // Затваряме навбара само ако е активен
+        if (navbar.classList.contains("active")) {
+            toggleNav();
+        }
+    });
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const footerForm = document.getElementById("footerContactForm");
