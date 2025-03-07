@@ -722,6 +722,26 @@ body {
   font-size: 18px;
 }
 
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer-bottom a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.footer-bottom a:hover {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.3);
+  transition: transform 0.5s ease-in-out;
+}
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
