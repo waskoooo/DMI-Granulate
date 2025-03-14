@@ -77,14 +77,14 @@
     <!--HEADER-->
 
 
-    <header class="header" data-header >
+    <header class="header hidden" data-header >
         <div class="container">
 
-            <a href="#" class="logo">DMI GRANULATE
+            <a href="#" class="logo hidden">DMI GRANULATE
                 <img src="./assets/images/dido-logo.png"  class="client-logo">
             </a>
 
-            <nav class="navbar" data-navbar>
+            <nav class="navbar hi" data-navbar>
 
                 <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
                     <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
@@ -133,12 +133,12 @@
         
                   <div class="hero-content">
         
-                    <h1 class="h1 hero-title">
+                    <h1 class="h1 hero-title ">
                         Ди Ем Ай 
                       <span class="span">Гранулейт ООД</span>
                     </h1>
         
-                    <p class="section-text">
+                    <p class="section-text hidden">
                         Специализирани в преработката на
                          технически отпадък от шприцови машини.
                           Ние разполагаме с изключително богат опит
@@ -161,7 +161,7 @@
                         alt="v" class="img-cover">
                     </div>
         
-                    <div class="hero-banner-2 img-holder" style="--width: 500; --height: 850;">
+                    <div class="hero-banner-2 img-holder hidden" style="--width: 500; --height: 850;">
                       <img src="./assets/images/hero-banner-2.jpg" width="500" height="850" 
                         class="img-cover">
                     </div>
@@ -178,14 +178,14 @@
                 <div class="container">
 
                     <div class="wrapper">
-                        <figure class="about-banner about-banner-1 img-holder" style="--width:600 ; --height:480 ; ">
+                        <figure class="about-banner about-banner-1 img-holder hidden" style="--width:600 ; --height:480 ; ">
                             <img src="./assets/images/about-1.jpeg" width="600" height="480" loading="lazy" alt="DMI GRANULATE" class="img-cover">
                         </figure>
 
-                        <h2 class="h2 section-title">Лицензирана Преработка на Технически Отпадък</h2>
+                        <h2 class="h2 section-title ">Лицензирана Преработка на Технически Отпадък</h2>
                     </div>
 
-                    <figure class="about-banner about-banner-2 img-holder" style="--width:500 ; --height:700 ;">
+                    <figure class="about-banner about-banner-2 img-holder hidden" style="--width:500 ; --height:700 ;">
                         <img src="./assets/images/about-2.jpg" width="500" height="700" loading="lazy" alt="DMI GRANULATE" class="img-cover">
                     </figure>
 
@@ -201,7 +201,7 @@
                             <a href="#" id="openModal" class="document-link">ВИЖ ТУК </a>
                         </p>
 
-                        <figure class="about-banner about-banner-3 img-holder" style="--width:850 ; --height:420 ;">
+                        <figure class="about-banner about-banner-3 img-holder hidden" style="--width:850 ; --height:420 ;">
                             <img src="./assets/images/about-3.jpg" width="850" height="420" loading="lazy" alt="DMI GRANULATE" class="img-cover">
                         </figure>
 
@@ -216,11 +216,11 @@
             <section class="section collection text-center" aria-labelledby="collection-label" id="services">
                 <div class="container">
         
-                  <h2 class="h2 section-title" id="collection-label">
+                  <h2 class="h2 section-title hidden" id="collection-label">
                     Нашите услуги 
                   </h2>
         
-                  <p class="section-text">
+                  <p class="section-text hidden">
                     Комплексни Услуги за Ваше Удобство
                   </p>
         
@@ -229,16 +229,16 @@
                     <li>
                       <div class="collection-card">
         
-                        <figure class="card-banner img-holder" style="--width: 500; --height: 550;">
+                        <figure class="card-banner img-holder " style="--width: 500; --height: 550;">
                           <img src="./assets/images/collection-1.jpg" width="500" height="550" loading="lazy"
                             alt="Pottery & Ceramics" class="img-cover">
                         </figure>
         
                         <div class="card-content">
         
-                          <h3 class="h3 card-title">Изкупуване На Материали</h3>
+                          <h3 class="h3 card-title hidden">Изкупуване На Материали</h3>
         
-                          <p class="card-text">
+                          <p class="card-text hidden">
                             
                             ABS,
                             POM,
@@ -269,9 +269,9 @@
         
                         <div class="card-content">
         
-                          <h3 class="h3 card-title">Смилане На Детайли</h3>
+                          <h3 class="h3 card-title hidden">Смилане На Детайли</h3>
         
-                          <p class="card-text">
+                          <p class="card-text hidden">
                             Също така предлагаме и услуга - смилане  на детайли / леяци.
                           </p>
         
@@ -296,9 +296,9 @@
         
                         <div class="card-content">
         
-                          <h3 class="h3 card-title">Организираме транспорта</h3>
+                          <h3 class="h3 card-title hidden">Организираме транспорта</h3>
         
-                          <p class="card-text">
+                          <p class="card-text hidden">
                             Ние осигуряваме организация на транспортните разходи,
                             което ви освобождава от този ангажимент
                           </p>
@@ -328,18 +328,18 @@
 
     <footer id="footer" class="footer">
       <div class="footer-container">
-          <!-- Лявата част: Контактна форма -->
+          
           <div class="footer-brand">
-              <h2 class="footer-title">Свържете се с нас</h2>
+              <h2 class="footer-title hidden">Свържете се с нас</h2>
               <form id="footerContactForm">
                   <label for="footer-name">Име:</label>
-                  <input type="text" id="footer-name" name="name" required>
+                  <input class="hidden" type="text" id="footer-name" name="name" required>
   
                   <label for="footer-email">Имейл:</label>
-                  <input type="email" id="footer-email" name="email" required>
+                  <input class="hidden" type="email" id="footer-email" name="email" required>
   
                   <label for="footer-message">Съобщение:</label>
-                  <textarea id="footer-message" name="message" required></textarea>
+                  <textarea class="hidden" id="footer-message" name="message" required></textarea>
   
                   <button type="submit" class="btn">Изпрати</button>
               </form>
@@ -347,7 +347,7 @@
     
         <!-- Средна част: Контакти -->
         <ul class="footer-list">
-          <li><p class="footer-list-title">КОНТАКТИ</p></li>
+          <li><p class="footer-list-title hidden">КОНТАКТИ</p></li>
           
           <li><p class="footer-list-title">
             <a href="viber://chat?number=+359 894 701 636">
@@ -368,11 +368,11 @@
             </a>
             +359 882 706 825</p></li>
 
-          <li><p class="footer-list-title">dmi.granulate@gmail.com</p></li>
+          <li><p class="footer-list-title hidden">dmi.granulate@gmail.com</p></li>
         </ul>
     
         <!-- Дясна част: Карта -->
-        <div class="footer-map">
+        <div class="footer-map hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1758.3398195225604!2d24.7376202821457!3d42.16818836307254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd12a503fd043%3A0xc8b91919e955da53!2z0JTQuCDQldC8INCQ0Lkg0JPRgNCw0L3Rg9C70LXQudGCINCe0J7QlA!5e0!3m2!1sen!2sbg!4v1740926355185!5m2!1sen!2sbg"
             width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy">

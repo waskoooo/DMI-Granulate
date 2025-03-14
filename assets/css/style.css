@@ -1060,3 +1060,34 @@ body {
 
   .footer-brand { padding-inline-end: 60px; }
   }
+
+  /*-----------------------------------*\
+  #ANIMATION STYLES
+\*-----------------------------------*/
+
+  .hidden {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .hidden.right {
+    transform: translateX(100px);
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .hidden.down {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -103,3 +103,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".hidden");
+  
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 } // Кога да се активира анимацията (20% видимост)
+    );
+  
+    elements.forEach(el => observer.observe(el));
+  });
+  
