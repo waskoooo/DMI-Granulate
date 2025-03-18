@@ -187,7 +187,12 @@ body {
 
 
 .btn {
-  background-color: var(--french-bistre);
+  background:linear-gradient(45deg,
+  #38B000,
+  #008000,
+  #007200,
+  #006400,
+  #004B23); ;
   color: var(--white);
   display: flex;
   align-items: center;
@@ -200,10 +205,24 @@ body {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   transition: var(--transition-2);
+  background-size: 300%;
+  animation: color-animation 2s infinite alternate;
+}
+
+.btn-send {
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  gap: 12px;
+  min-height: 40px;
+  padding-inline: 38px;
+  border-radius: 20px;
+  transform: scale(1.1);
 }
 
 .btn:is(:hover, :focus-visible) {
   background-color: var(--umber);
+  transform: scale(1.2 ea);
 }
 
 .img-holder {
@@ -415,9 +434,26 @@ body {
 \*-----------------------------------*/
 
 .about {
-  background: var(--bistre);
+  background: linear-gradient(45deg,
+  #38B000,
+  #008000,
+  #007200,
+  #006400,
+  #004B23);
   color: var(--white);
+  background-size: 400%;
+  animation: color-animation 2s infinite alternate;
 }
+
+@keyframes color-animation {
+  0% {
+    background-position: left
+  }
+  100% {
+    background-position: right
+  }
+}
+
 
 .about .container {
   display: grid;
@@ -465,7 +501,7 @@ body {
 
 /* Стил за линка */
 .document-link {
-  color: blue;
+  color: rgb(255, 0, 34);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -568,12 +604,19 @@ body {
 \*-----------------------------------*/
   
 .footer {
-  background-color: var(--bistre);
+  background: linear-gradient(45deg,
+  #38B000,
+  #008000,
+  #007200,
+  #006400,
+  #004B23);
   color: var(--white);
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center; /* Центрира футъра в средата на страницата */
+  background-size: 400%;
+  animation: color-animation 2s infinite alternate;
 }
 
 /* Централен контейнер, който започва от средата на страницата */
