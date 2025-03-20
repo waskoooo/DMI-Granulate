@@ -426,9 +426,6 @@ body {
   width: 160px;
 }
 
-
-
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -1256,18 +1253,18 @@ body {
 
 
 .materials-page {
-  position: relative; /* Гарантира, че бутонът ще се позиционира спрямо страницата */
+  position: relative; 
 }
 
 .materials-page .btn {
-  position: fixed; /* Фиксира бутона в долния десен ъгъл */
+  position: fixed; 
   bottom: 80px;
   left: 20px;
-  opacity: 0; /* По подразбиране бутонът е скрит */
+  opacity: 0; 
   transition: opacity 0.3s ease-in-out;
   z-index: 1000;
 }
 
 .materials-page .btn.show {
-  opacity: 1; /* Показва бутона само при достигане на края на страницата */
+  opacity: 1; 
 }
