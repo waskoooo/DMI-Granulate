@@ -1204,3 +1204,70 @@ body {
 .h2.section-title {
   margin-bottom: 45px;
 }
+
+/* scroll top button */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #38B000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  box-shadow: 0px 4px 10px rgba(0,0,0, 3);
+  transition: opacity 0.3 ease-in-out;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 70px;
+}
+
+.iframe-container iframe {
+  width: 80%;
+  max-width: 700px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 3);
+  border: none;
+}
+
+
+/*details html */
+
+#go-header .hero-content {
+  margin-right: 20px;
+}
+
+/* transport page */
+.transport-page .hero-content {
+  margin-right: 50px;
+}
+
+
+
+
+.materials-page {
+  position: relative; /* Гарантира, че бутонът ще се позиционира спрямо страницата */
+}
+
+.materials-page .btn {
+  position: fixed; /* Фиксира бутона в долния десен ъгъл */
+  bottom: 80px;
+  left: 20px;
+  opacity: 0; /* По подразбиране бутонът е скрит */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.materials-page .btn.show {
+  opacity: 1; /* Показва бутона само при достигане на края на страницата */
+}

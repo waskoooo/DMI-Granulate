@@ -123,3 +123,46 @@ document.addEventListener("DOMContentLoaded", function () {
     elements.forEach(el => observer.observe(el));
   });
   
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    window.addEventListener("scroll", function () {
+        // Проверка дали потребителят е скролнал до долната част на страницата
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+            scrollToTopBtn.style.display = "block"; 
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    });
+
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("assets/таблица_полиамиди.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("tableContainer").innerHTML = data;
+        })
+        .catch(error => console.error("Грешка при зареждането на таблицата:", error));
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const backButton = document.querySelector(".materials-page .btn");
+
+    if (backButton) { // Проверява дали бутонът съществува в страницата
+        window.addEventListener("scroll", function () {
+            // Проверява дали потребителят е скролнал до края на страницата
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+                backButton.classList.add("show"); // Показва бутона
+            } else {
+                backButton.classList.remove("show"); // Скрива бутона
+            }
+        });
+    }
+});
